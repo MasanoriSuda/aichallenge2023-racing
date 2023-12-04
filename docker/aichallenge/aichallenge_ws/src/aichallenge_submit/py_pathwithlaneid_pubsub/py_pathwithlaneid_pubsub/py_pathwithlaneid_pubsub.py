@@ -1,35 +1,30 @@
 import rclpy
 from rclpy.node import Node
-from autoware_auto_planning_msgs.msg import PathWithLandId
-
-
+from autoware_auto_planning_msgs.msg import PathWithLaneId
 from std_msgs.msg import String
 
 
 class MinimalSubscriber(Node):
-    def __init__(self) -> None:
-        super().__init__("potential_field_planner")
-        self.is_start_received = False
-        self.is_goal_received = False
-
-        self.start_sub = self.create_subscription(
-            PathWithLandId,
+    def __init__(self):
+        super().__init__("minimal_subscriber")
+        self.subscription = self.create_subscription(
+            PathWithLaneId,
             "behavior_planning/path_with_lane_id",
-            self.start_callback,
+            self.listener_callback,
             10,
         )
+        self.subscription  # prevent unused variable warning
 
         self.path_pub = self.create_publisher(
-            PathWithLandId,
-            "/potential_planner/path",
+            PathWithLaneId,
+            "behavior_planning/path_with_lane_id_modified",
             10,
         )
 
-
-def start_callback(self, msg: PathWithLandId):
-    new_path = msg
-    self.get_logger().info("I heard PathWithLaneId")
-    self.path_pub.publish(new_path)
+    def listener_callback(self, msg: PathWithLaneId):
+        path = msg
+        self.get_logger().info("I heard PathWithLaneId")
+        self.path_pub.publish(path)
 
 
 def main(args=None):

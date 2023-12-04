@@ -222,13 +222,14 @@
         <group>
           <!--<node pkg="cpp_pubsub" exec="talker"/>-->
           <!--<node pkg="cpp_pubsub" exec="listener"/>-->
-          <node pkg="py_pubsub" exec="talker"/>
-          <node pkg="py_pubsub" exec="listener"/>
+          <!--<node pkg="py_pubsub" exec="talker"/>-->
+          <!--<node pkg="py_pubsub" exec="listener"/>-->
+          <node pkg="py_path_subscriber" exec="listener"/>
           <!-- <node pkg="path_subscriber" exec="path_subscriber"/> -->
-          <!-- <node pkg="cpp_pathwithlaneid_pubsub" exec="cpp_pathwithlaneid_pubsub"/> -->
+          <!--<node pkg="cpp_pathwithlaneid_pubsub" exec="cpp_pathwithlaneid_pubsub"/> -->
+          <!-- <node pkg="py_pathwithlaneid_pubsub" exec="py_pathwithlaneid_pubsub"/> -->
         </group> <!-- Simple Pub Sub -->
       </group> <!-- lane_driving -->
-
       <!-- Customizable -->
       <node pkg="path_to_trajectory" exec="path_to_trajectory_node" name="path_to_trajectory" output="screen">
         <remap from="input" to="/planning/scenario_planning/lane_driving/behavior_planning/path_with_lane_id_modified"/>
@@ -241,9 +242,9 @@
   <node pkg="simple_pure_pursuit" exec="simple_pure_pursuit" name="simple_pure_pursuit_node" output="screen">
     <param name="use_external_target_vel" value="false"/>
     <param name="external_target_vel" value="100.0"/>
-    <param name="lookahead_gain" value="0.4"/>
+    <param name="lookahead_gain" value="0.44"/>
     <param name="lookahead_min_distance" value="5.0"/>
-    <param name="speed_proportional_gain" value="1.0"/>
+    <param name="speed_proportional_gain" value="0.5"/>
 
     <remap from="input/kinematics" to="/localization/kinematic_state"/>
     <remap from="input/trajectory" to="/planning/scenario_planning/trajectory"/>
