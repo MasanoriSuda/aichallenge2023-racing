@@ -17,23 +17,11 @@ void PathSubscriber::topicCallback(const PathWithLaneId::ConstSharedPtr msg)
 {
   PathWithLaneId path;
 
-  path = *msg;
-
   /*PathPointWithLaneID*/
   path.header = msg->header;
   path.left_bound = msg->left_bound;
   path.right_bound = msg->right_bound;
   path.points = msg->points;
-
-  /*
-  path.header = msg->header;
-  path.left_bound = msg->left_bound;
-  path.right_bound = msg->right_bound;
-  for (const auto &point : msg->points)
-  {
-    path.points.push_back(point.point);
-  }
-  */
 
   // RCLCPP_INFO(this->get_logger(), "I heard");
 

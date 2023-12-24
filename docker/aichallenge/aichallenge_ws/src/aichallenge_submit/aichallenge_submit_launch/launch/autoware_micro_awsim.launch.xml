@@ -251,6 +251,11 @@
     <remap from="output/control_cmd" to="/control/command/control_cmd"/>
   </node>
 
+  <group>
+    <!--<node pkg="my_pure_pursuit" exec="my_pure_pursuit"/>-->
+    <!--<node pkg="my_cpp_lqr" exec="my_cpp_lqr"/>-->
+  </group>
+
   <!-- vehicle -->
   <include file="$(find-pkg-share raw_vehicle_cmd_converter)/launch/raw_vehicle_converter.launch.xml">
     <arg name="max_throttle" value="1.0"/>
