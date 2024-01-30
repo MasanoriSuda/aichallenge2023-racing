@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <osm generator="VMB">
-  <MetaInfo format_version="1" map_version="10"/>
+  <MetaInfo format_version="1" map_version="11"/>
   <node id="186" lat="45.62358179353931" lon="9.28174112541207">
     <tag k="mgrs_code" v="32TNR219522"/>
     <tag k="local_x" v="21963.326"/>
@@ -2384,7 +2384,7 @@
     <member type="way" role="right" ref="5745"/>
     <tag k="type" v="lanelet"/>
     <tag k="subtype" v="road"/>
-    <tag k="speed_limit" v="40"/>
+    <tag k="speed_limit" v="30"/>
     <tag k="location" v="urban"/>
     <tag k="one_way" v="yes"/>
     <tag k="participant:vehicle" v="yes"/>
@@ -2404,7 +2404,7 @@
     <member type="way" role="right" ref="5760"/>
     <tag k="type" v="lanelet"/>
     <tag k="subtype" v="road"/>
-    <tag k="speed_limit" v="40"/>
+    <tag k="speed_limit" v="20"/>
     <tag k="location" v="urban"/>
     <tag k="one_way" v="yes"/>
     <tag k="participant:vehicle" v="yes"/>
@@ -2414,7 +2414,7 @@
     <member type="way" role="right" ref="5750"/>
     <tag k="type" v="lanelet"/>
     <tag k="subtype" v="road"/>
-    <tag k="speed_limit" v="100"/>
+    <tag k="speed_limit" v="40"/>
     <tag k="location" v="urban"/>
     <tag k="one_way" v="yes"/>
     <tag k="participant:vehicle" v="yes"/>
@@ -2424,7 +2424,7 @@
     <member type="way" role="right" ref="5785"/>
     <tag k="type" v="lanelet"/>
     <tag k="subtype" v="road"/>
-    <tag k="speed_limit" v="40"/>
+    <tag k="speed_limit" v="18"/>
     <tag k="location" v="urban"/>
     <tag k="one_way" v="yes"/>
     <tag k="participant:vehicle" v="yes"/>
@@ -2444,7 +2444,7 @@
     <member type="way" role="right" ref="5770"/>
     <tag k="type" v="lanelet"/>
     <tag k="subtype" v="road"/>
-    <tag k="speed_limit" v="60"/>
+    <tag k="speed_limit" v="20"/>
     <tag k="location" v="urban"/>
     <tag k="one_way" v="yes"/>
     <tag k="participant:vehicle" v="yes"/>
@@ -2464,7 +2464,7 @@
     <member type="way" role="right" ref="5788"/>
     <tag k="type" v="lanelet"/>
     <tag k="subtype" v="road"/>
-    <tag k="speed_limit" v="100"/>
+    <tag k="speed_limit" v="40"/>
     <tag k="location" v="urban"/>
     <tag k="one_way" v="yes"/>
     <tag k="participant:vehicle" v="yes"/>
@@ -2474,7 +2474,7 @@
     <member type="way" role="right" ref="5789"/>
     <tag k="type" v="lanelet"/>
     <tag k="subtype" v="road"/>
-    <tag k="speed_limit" v="100"/>
+    <tag k="speed_limit" v="40"/>
     <tag k="location" v="urban"/>
     <tag k="one_way" v="yes"/>
     <tag k="participant:vehicle" v="yes"/>

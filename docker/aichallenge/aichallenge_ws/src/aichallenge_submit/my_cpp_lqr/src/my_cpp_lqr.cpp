@@ -228,7 +228,7 @@ namespace cpprobotics
 
         using namespace std::literals::chrono_literals;
         timer_ =
-            rclcpp::create_timer(this, get_clock(), 30ms, std::bind(&MyCppLqr::onTimer, this));
+            rclcpp::create_timer(this, get_clock(), 10ms, std::bind(&MyCppLqr::onTimer, this));
     }
 
     AckermannControlCommand zeroAckermannControlCommand(rclcpp::Time stamp)
@@ -286,7 +286,7 @@ namespace cpprobotics
         Vec_f ryaw;
         Vec_f rcurvature;
         Vec_f rs;
-        for (float i = 0; i < csp_obj.s.back(); i++)
+        for (float i = 0; i < csp_obj.s.back(); i += 0.1)
         {
             std::array<float, 2> point_ = csp_obj.calc_postion(i);
             r_x.push_back(point_[0]);
@@ -299,7 +299,7 @@ namespace cpprobotics
         //  ビルドエラー回避
         //  Vec_f speed_profile = calc_speed_profile(r_x, r_y, ryaw, target_speed);
         Vec_f speed_profile;
-        for (float i = 0; i < csp_obj.s.back(); i++)
+        for (float i = 0; i < csp_obj.s.back(); i += 0.1)
         {
             if (i < trajectory_->points.size())
             {

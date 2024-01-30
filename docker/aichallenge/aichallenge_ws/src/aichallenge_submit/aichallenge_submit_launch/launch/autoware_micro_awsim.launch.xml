@@ -248,12 +248,12 @@
 
     <remap from="input/kinematics" to="/localization/kinematic_state"/>
     <remap from="input/trajectory" to="/planning/scenario_planning/trajectory"/>
-    <remap from="output/control_cmd" to="/control/command/control_cmd"/>
+    <remap from="output/control_cmd" to="/control/command/control_cmd2"/>
   </node>
 
   <group>
     <!--<node pkg="my_pure_pursuit" exec="my_pure_pursuit"/>-->
-    <!--<node pkg="my_cpp_lqr" exec="my_cpp_lqr"/>-->
+    <node pkg="my_cpp_lqr" exec="my_cpp_lqr"/>
   </group>
 
   <!-- vehicle -->
